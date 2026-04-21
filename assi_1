@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <script>
+        let text = '<h1>text</h1>';
+        box1.append(document.createTextNode(text));
+        box2.innerHTML = text;
+        box3.textContent = text
+        //Answer: 1 and 3
+    </script>
+
+  <ol id="elem">
+    <li>Hello</li>
+    <li>World</li>
+  </ol>
+
+  <script>
+    //Create a function clear(elem) that removes everything from the element. 
+    function clear(elem){
+        while(elem.firstChild){
+            elem.firstChild.remove();
+
+        }
+    }
+    let elem = document.getElementById('elem')
+    clear (elem)
+  </script>
+
+  <ul id="list"></ul>
+
+  <ul id="ul">
+    <li id="one">1</li>
+    <li id="two">4</li>
+  </ul>
+  <script>
+    let ul = document.getElementById("list");
+    while(true){
+      let text = prompt('enter item:');
+      if("!text")break;
+      let li = document.createElement("li");
+      let textNote = document.createTextNode(text);
+      li.appendChild(textNote);
+      ul.append(li);
+    }
+
+    //Write the code to insert <li>2</li><li>3</li> between two <li> here
+      one.insertAdjacentHTML("afterend","<li>2</li><li>3</Li>");
+  </script>
+</body>
+</html>
